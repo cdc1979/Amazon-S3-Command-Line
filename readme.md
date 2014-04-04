@@ -2,7 +2,9 @@
 
 Use this client to easily upload files or folders to an Amazon S3 bucket from the windows command line.
 
-Download Windows installer (automatically adds s3cli.exe to windows path)
+<h3><a href="http://dv2e2roxiy8vr.cloudfront.net/S3commandline_1.0.0.0.zip">Download Windows installer</a></h1>
+
+(automatically adds s3cli.exe to windows path)
 
 * Requires .NET framework 4.5
 
