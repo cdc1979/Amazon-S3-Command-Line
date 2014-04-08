@@ -109,4 +109,4 @@ You can adjust the compression level, to optimise for speed or for compression
 
 The client is capable of sending a success/failure notification to AlertScale when a file has uploaded so you can be alerted if you are using this from a scehduled task for example.  
 You need to provide your API Key from your AlertScale account as an argument.  This is very useful if you are uploading files to S3 for backup purposes and want
-to get notified that the upload worked.
+to get notified that the upload worked and to see a history of file transfers.
