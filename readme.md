@@ -1,5 +1,7 @@
 #Amazon S3 Command Line Client
 
+Latest Version: 1.1.0.0
+
 Use this client to easily upload files or folders to an Amazon S3 bucket from the windows command line.
 
 <h3><a href="http://dv2e2roxiy8vr.cloudfront.net/S3commandline_1.0.0.0.zip">Download Windows installer</a></h1>
@@ -7,6 +9,7 @@ Use this client to easily upload files or folders to an Amazon S3 bucket from th
 (automatically adds s3cli.exe to windows path)
 
 * Requires .NET framework 4.5
+* You may get a warning when downloading, this is because I have not signed the installer.
 
 ##Features
 
@@ -21,13 +24,14 @@ Use this client to easily upload files or folders to an Amazon S3 bucket from th
 - Standard or Reduced Redundancy
 - Automatic Zip Compression of files
 - Integration of AlertScale Notifications
+- Calculate Bucket Size
 
 ##Arguments
 <pre>
 Usage: s3cli options
 
    OPTION                   TYPE              DESCRIPTION
-   -Action(-A)              s3action*         Available action types: PUTFILE,PUTFOLDER,GET,DELETE,DELETEBUCKET,CREATEBUCKET,LIST,USECONFIG
+   -Action(-A)              s3action*         Available action types: PUTFILE,PUTFOLDER,GET,DELETE,DELETEBUCKET,CREATEBUCKET,LIST,USECONFIG,BUCKETSIZE
                                                 USECONFIG
                                                 PUTFILE
                                                 PUTFOLDER
@@ -36,6 +40,7 @@ Usage: s3cli options
                                                 DELETEBUCKET
                                                 CREATEBUCKET
                                                 LIST
+												BUCKETSIZE
    -AccessKey(-Ac)          string            Your Amazon Access Key
    -Secret(-S)              string            Your Amazon Secret Key
    -Bucket(-B)              string            Your Amazon S3 Bucket Name
@@ -76,6 +81,13 @@ Note that the bucket name must be unique and cannot have been used before by any
 
 This uploads a single file, __D&#95;sqlllite&#95;20140403-095440206.zip__
 
+####Calculate S3 Bucket Size
+
+Use BUCKETSIZE action to calculate the size of a bucket (nicely formatted as MB/GB/TB) and also displays
+a count of the number of total files.
+
+<b>Note:</b> This call can be slow on very large buckets, as we can only manually page 1000 files in the bucket per request.
+
 ####Save credentials to registry
 
 It is useful to persist the access key and secret into the registry so that the credentials
@@ -107,6 +119,6 @@ You can adjust the compression level, to optimise for speed or for compression
 
 ##Notifications
 
-The client is capable of sending a success/failure notification to AlertScale when a file has uploaded so you can be alerted if you are using this from a scehduled task for example.  
+The client is capable of sending a success/failure notification to <a href="http://www.alertscale.com" title="AlertScale Cloud Notifications">AlertScale</a> when a file has uploaded so you can be alerted if you are using this from a scehduled task for example.  
 You need to provide your API Key from your AlertScale account as an argument.  This is very useful if you are uploading files to S3 for backup purposes and want
 to get notified that the upload worked and to see a history of file transfers.

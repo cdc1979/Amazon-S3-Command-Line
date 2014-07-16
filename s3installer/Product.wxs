@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension">
-	<Product Id="*" Name="s3installer" Language="1033" Version="1.0.0.0" Manufacturer="CCasey" UpgradeCode="fcc405e3-ddee-4800-99f7-925b0f500d64">
+	<Product Id="*" Name="s3installer" Language="1033" Version="1.1.0.0" Manufacturer="CCasey" UpgradeCode="fcc405e3-ddee-4800-99f7-925b0f500d64">
 		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
 		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed."  />
 		<MediaTemplate />

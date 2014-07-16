@@ -30,7 +30,7 @@ using PowerArgs;
     public class s3CommandObject
     {
         [ArgRequired]
-        [ArgDescription("Available action types: PUTFILE,PUTFOLDER,GET,DELETE,DELETEBUCKET,CREATEBUCKET,LIST,USECONFIG")]
+        [ArgDescription("Available action types: PUTFILE,PUTFOLDER,GET,DELETE,DELETEBUCKET,CREATEBUCKET,LIST,USECONFIG,BUCKETSIZE")]
         public S3Action Action { get; set; }
         [ArgDescription("Your Amazon Access Key")]
         public string AccessKey { get; set; }
@@ -58,7 +58,7 @@ using PowerArgs;
         public bool ZipThis { get; set; } // does the file/folder get zipped before sending
         [ArgDescription("Zip compression level Best Compression/Normal/Least Compression")]
         public ZipSpeedOptions ZipSpeed { get; set; } // which compression level to use
-        [ArgDescription("Remember Amazon Credentials in Registry")] // not yet functional
+        [ArgDescription("Persist Amazon Credentials in Registry")] // not yet functional
         public bool PersistKeys { get; set; }
     }
-    public enum S3Action { USECONFIG,PUTFILE, PUTFOLDER, GET, DELETE, DELETEBUCKET,CREATEBUCKET,LIST }
+    public enum S3Action { USECONFIG,PUTFILE, PUTFOLDER, GET, DELETE, DELETEBUCKET,CREATEBUCKET,LIST,BUCKETSIZE }

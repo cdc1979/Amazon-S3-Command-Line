@@ -79,6 +79,49 @@ public static class MyExtensions
             return result;
         }
 
+        public static string GetBucketSize(S3Connector commandObject)
+        {
+            long filesize = 0;
+            long filecount = 0;
+            using (var client = new AmazonS3Client(commandObject.AccessKey, commandObject.Secret))
+            {
+                ListObjectsRequest request = new ListObjectsRequest();
+                request = new ListObjectsRequest();
+                request.BucketName = commandObject.Bucket;
+                do
+                {
+                    ListObjectsResponse response = client.ListObjects(request);
+
+                    foreach (var s3obj in response.S3Objects) {
+                        filesize += s3obj.Size;
+                        filecount++;
+                    }
+
+                    if (response.IsTruncated)
+                    {
+                        request.Marker = response.NextMarker;
+                    }
+                    else
+                    {
+                        request = null;
+                    }
+                } while (request != null);
+            }
+
+            return FormatBytes(filesize) + " [" + filecount + " files]";
+        }
+
+        private static string FormatBytes(long bytes)
+        {
+            string[] Suffix = { "B", "KB", "MB", "GB", "TB" };
+            int i = 0;
+            double dblSByte = bytes;
+            if (bytes > 1024)
+                for (i = 0; (bytes / 1024) > 0; i++, bytes /= 1024)
+                    dblSByte = bytes / 1024.0;
+            return String.Format("{0:0.##}{1}", dblSByte, Suffix[i]);
+        }
+
         public static string CreateBucket(S3Connector commandObject)
         {
             var result = "";

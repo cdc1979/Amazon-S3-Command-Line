@@ -49,6 +49,10 @@ namespace s3cli
             {
                 valid = true;
             }
+            else if (cobj.Action == S3Action.BUCKETSIZE)
+            {
+                valid = true;
+            }
             else if (cobj.Action == S3Action.GET) {
                 if (!String.IsNullOrEmpty(cobj.FileRemote))
                 {
@@ -80,7 +84,7 @@ namespace s3cli
 
             if (
                 cobj.Action == S3Action.CREATEBUCKET || cobj.Action == S3Action.DELETE || cobj.Action == S3Action.PUTFILE ||
-                cobj.Action == S3Action.PUTFOLDER || cobj.Action == S3Action.LIST || cobj.Action == S3Action.GET || cobj.Action == S3Action.DELETEBUCKET)
+                cobj.Action == S3Action.PUTFOLDER || cobj.Action == S3Action.LIST || cobj.Action == S3Action.GET || cobj.Action == S3Action.DELETEBUCKET || cobj.Action == S3Action.BUCKETSIZE)
             {
 
                 if (String.IsNullOrEmpty(cobj.Bucket))
@@ -201,6 +205,13 @@ namespace s3cli
                             if (!String.IsNullOrEmpty(cobj.Bucket))
                             {
                                 Console.WriteLine("\r" + s3commands.CreateBucket(s3c));
+                            }
+                        }
+                        if (cobj.Action == S3Action.BUCKETSIZE)
+                        {
+                            if (!String.IsNullOrEmpty(cobj.Bucket))
+                            {
+                                Console.WriteLine("\r" + s3commands.GetBucketSize(s3c));
                             }
                         }
                         if (cobj.Action == S3Action.LIST)
