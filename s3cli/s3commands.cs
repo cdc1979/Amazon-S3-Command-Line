@@ -65,7 +65,7 @@ public static class MyExtensions
                     DeleteObjectResponse d = client.DeleteObject(deleteObjectRequest);
                     if (d != null)
                     {
-                        result = d.StatusCode.ToString();
+                        result = d.HttpStatusCode.ToString();
                     }
                     else
                     {
@@ -193,8 +193,7 @@ public static class MyExtensions
                     KeyPrefix = keyprefix,
                     Directory = commandobject.FileLocal,
                     ServerSideEncryptionMethod = ServerSideEncryptionMethod.AES256,
-                    StorageClass = S3StorageClass.Standard,
-                    Timeout = (100 * 60 * 60 * 1000)
+                    StorageClass = S3StorageClass.Standard
                 };
 
                 dirrequest.UploadDirectoryProgressEvent += directoryTransferUtilityRequest_UploadProgressEvent;
@@ -298,8 +297,7 @@ public static class MyExtensions
                 Key = filename,
                 FilePath = f.FullName,
                 ServerSideEncryptionMethod = ServerSideEncryptionMethod.AES256,
-                StorageClass = S3StorageClass.Standard,
-                Timeout = (100 * 60 * 60 * 1000),
+                StorageClass = S3StorageClass.Standard, 
                 PartSize = (10 * 1024 * 1024)
             };
 
