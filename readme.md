@@ -1,10 +1,13 @@
-#Amazon S3 Command Line Client
+#Amazon S3 Windows Command Line Client
 
-Latest Version: 1.1.0.0
+Latest Version: 1.2.0.0
 
-Use this client to easily upload files or folders to an Amazon S3 bucket from the windows command line.
+Use this client to easily upload files or folders to an Amazon S3 bucket 
+from the windows command line.  I use this tool to schedule automatic backups 
+of selected folders and files using windows task scheduler - no need to worry about overwrites 
+as the files can automatically get the current date and time added onto the filename.
 
-<h3><a href="http://dv2e2roxiy8vr.cloudfront.net/S3commandline_1.0.0.0.zip">Download Windows installer</a></h1>
+<h3><a href="http://dv2e2roxiy8vr.cloudfront.net/S3commandline_1.2.0.0.zip">Download Windows installer 1.2.0.0</a></h1>
 
 (automatically adds s3cli.exe to windows path)
 
