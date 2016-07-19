@@ -7,9 +7,9 @@ from the windows command line.  I use this tool to schedule automatic backups
 of selected folders and files using windows task scheduler - no need to worry about overwrites 
 as the files can automatically get the current date and time added onto the filename.
 
-<h3><a href="http://dv2e2roxiy8vr.cloudfront.net/S3commandline_1.2.0.0.zip">Download Windows installer 1.2.0.0</a></h1>
+<h3><a href="https://github.com/cdc1979/Amazon-S3-Command-Line/archive/master.zip">Download Latest Version 1.3.0.0</a></h1>
 
-(automatically adds s3cli.exe to windows path)
+(Windows installer is in /install subfolder - automatically adds s3cli.exe to windows path)
 
 * Requires .NET framework 4.5
 * You may get a warning when downloading, this is because I have not signed the installer.
