@@ -1,6 +1,6 @@
 #Amazon S3 Windows Command Line Client
 
-Latest Version: 1.2.0.0
+Latest Version: 1.3.0.0
 
 Use this client to easily upload files or folders to an Amazon S3 bucket 
 from the windows command line.  I use this tool to schedule automatic backups 
@@ -49,7 +49,11 @@ Usage: s3cli options
    -Bucket(-B)              string            Your Amazon S3 Bucket Name
    -FileLocal(-F)           string            Local File or Folder
    -FileRemote(-Fi)         string            Remote Object Name (The file or folder name stored in S3)
-   -ReducedRedundancy(-R)   switch            Use Reduced Redundancy Storage
+   -StorageOption(-St)		storageoptions    Set Storage Storage Type (see https://aws.amazon.com/s3/storage-classes/)
+												STANDARD
+												STANDARDIA
+												REDUCEDREDUNDANCY
+												GLACIER
    -ConfigFile(-C)          string            Load settings from a config file
    -DateStampFilename(-D)   switch            Automatically adjust filename to include current date and time
    -ProxyAddress(-P)        string            Proxy server address e.g. http://myproxy
@@ -125,3 +129,10 @@ You can adjust the compression level, to optimise for speed or for compression
 The client is capable of sending a success/failure notification to <a href="http://www.alertscale.com" title="AlertScale Cloud Notifications">AlertScale</a> when a file has uploaded so you can be alerted if you are using this from a scehduled task for example.  
 You need to provide your API Key from your AlertScale account as an argument.  This is very useful if you are uploading files to S3 for backup purposes and want
 to get notified that the upload worked and to see a history of file transfers.
+
+##Version Changes
+
+1.3.0.0 
+
+- Updated Restsharp, PowerArgs,Json.NET, DotNetZip, AWSSDK, Automapper libraries to Latest
+- Added STANDARDIA and GLACIER as storage classes and changed the options slightly to support this

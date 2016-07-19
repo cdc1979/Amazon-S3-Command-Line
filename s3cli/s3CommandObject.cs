@@ -12,7 +12,7 @@ using System.Threading.Tasks;
         public string Bucket { get; set; }
         public string FileLocal { get; set; }
         public string FileRemote { get; set; }
-        public bool ReducedRedundancy { get; set; }
+        public StorageOptions StorageOption { get; set; }
         public bool DateStampFilename { get; set; }
         public string ProxyAddress { get; set; }
         public string ProxyPort { get; set; }
@@ -23,6 +23,7 @@ using System.Threading.Tasks;
     }
 
     public enum ZipSpeedOptions { SLOW,DEFAULT,FAST }
+    public enum StorageOptions { STANDARD,STANDARDIA,REDUCEDREDUNDANCY,GLACIER }
 
 
 

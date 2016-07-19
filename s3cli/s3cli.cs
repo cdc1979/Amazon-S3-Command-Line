@@ -197,7 +197,7 @@ namespace s3cli
                     if (ValidateComand(cobj))
                     {
 
-                        Mapper.CreateMap<s3CommandObject, S3Connector>();
+                        Mapper.Initialize(cfg => cfg.CreateMap<s3CommandObject, S3Connector>());
                         S3Connector s3c = Mapper.Map<S3Connector>(cobj);
                         
                         if (cobj.Action == S3Action.CREATEBUCKET)

@@ -43,7 +43,7 @@ using PowerArgs;
         [ArgDescription("Remote Object Name (The file or folder name stored in S3)")]
         public string FileRemote { get; set; }
         [ArgDescription("Use Reduced Redundancy Storage")]
-        public bool ReducedRedundancy { get; set; }
+        public StorageOptions StorageOption { get; set; }
         [ArgDescription("Load settings from a config file")]
         public string ConfigFile { get; set; }
         [ArgDescription("Automatically adjust filename to include current date and time")]
