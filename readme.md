@@ -24,7 +24,7 @@ as the files can automatically get the current date and time added onto the file
 - Delete object
 - Create/Delete Bucket
 - Automatically Save amazon access credentials into registry
-- Standard or Reduced Redundancy
+- Standard, Standard Infrequent Access, Reduced Redundancy or Glacier as Storage Options
 - Automatic Zip Compression of files
 - Integration of AlertScale Notifications
 - Calculate Bucket Size
