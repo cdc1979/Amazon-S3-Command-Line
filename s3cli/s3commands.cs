@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 using Amazon.S3;
 using Amazon.S3.Model;
 using Amazon.S3.Transfer;
-using AlertScale.NET;
 using Ionic.Zip;
 
 public class CommandResponse
@@ -222,12 +221,6 @@ public static class s3commands
 
             fileTransferUtility.UploadDirectory(dirrequest);
 
-            if (!String.IsNullOrEmpty(commandobject.AlertScaleApiKey))
-            {
-                AlertScale.NET.AlertScale.api = commandobject.AlertScaleApiKey;
-                var y = AlertScale.NET.AlertScale.SendMessage("Uploaded Folder " + commandobject.Action + " " + commandobject.FileLocal, 4, "S3-Commandline", "", commandobject);
-            }
-
             return "Upload completed";
         }
     }
@@ -342,12 +335,6 @@ public static class s3commands
         }
 
         fileTransferUtility.Upload(fileTransferUtilityRequest);
-
-        if (!String.IsNullOrEmpty(commandobject.AlertScaleApiKey))
-        {
-            AlertScale.NET.AlertScale.api = commandobject.AlertScaleApiKey;
-            var y = AlertScale.NET.AlertScale.SendMessage("Uploaded File " + commandobject.Action + " " + f.FullName, 4, "S3-Commandline", "", commandobject);
-        }
 
         if (File.Exists(f.FullName) && commandobject.ZipThis)
         {

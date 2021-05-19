@@ -1,13 +1,13 @@
 #Amazon S3 Windows Command Line Client
 
-Latest Version: 1.3.0.0
+Latest Version: 1.4.0.0
 
 Use this client to easily upload files or folders to an Amazon S3 bucket 
 from the windows command line.  I use this tool to schedule automatic backups 
 of selected folders and files using windows task scheduler - no need to worry about overwrites 
 as the files can automatically get the current date and time added onto the filename.
 
-<h3><a href="https://github.com/cdc1979/Amazon-S3-Command-Line/archive/master.zip">Download Latest Version 1.3.0.0</a></h1>
+<h3><a href="https://github.com/cdc1979/Amazon-S3-Command-Line/archive/master.zip">Download Latest Version 1.4.0.0</a></h1>
 
 (Windows installer is in /install subfolder - automatically adds s3cli.exe to windows path)
 
@@ -26,7 +26,6 @@ as the files can automatically get the current date and time added onto the file
 - Automatically Save amazon access credentials into registry
 - Standard, Standard Infrequent Access, Reduced Redundancy or Glacier as Storage Options
 - Automatic Zip Compression of files
-- Integration of AlertScale Notifications
 - Calculate Bucket Size
 
 ##Arguments
@@ -126,11 +125,13 @@ You can adjust the compression level, to optimise for speed or for compression
 
 ##Notifications
 
-The client is capable of sending a success/failure notification to <a href="http://www.alertscale.com" title="AlertScale Cloud Notifications">AlertScale</a> when a file has uploaded so you can be alerted if you are using this from a scehduled task for example.  
-You need to provide your API Key from your AlertScale account as an argument.  This is very useful if you are uploading files to S3 for backup purposes and want
-to get notified that the upload worked and to see a history of file transfers.
+To Do (add support for Raygun etc.)
 
 ##Version Changes
+
+1.4.0.0
+
+- Updated Restsharp, PowerArgs,Json.NET, DotNetZip, AWSSDK, Automapper libraries to Latest
 
 1.3.0.0 
 

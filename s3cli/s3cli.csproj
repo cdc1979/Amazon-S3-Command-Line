@@ -71,9 +71,6 @@
     <AssemblyOriginatorKeyFile>s3cli_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AlertScale.Net">
-      <HintPath>..\packages\AlertScale.Net.1.0.4.0\lib\net45\AlertScale.Net.dll</HintPath>
-    </Reference>
     <Reference Include="AutoMapper, Version=10.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
       <HintPath>..\packages\AutoMapper.10.1.1\lib\net461\AutoMapper.dll</HintPath>
     </Reference>
