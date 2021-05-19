@@ -9,6 +9,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using AutoMapper;
 using Microsoft.Win32;
+
 namespace s3cli
 {
     public static class Launch
@@ -196,9 +197,11 @@ namespace s3cli
 
                     if (ValidateComand(cobj))
                     {
+                        var config = new MapperConfiguration(cfg => cfg.CreateMap<s3CommandObject, S3Connector>());
+                        var mapper = config.CreateMapper();
 
-                        Mapper.Initialize(cfg => cfg.CreateMap<s3CommandObject, S3Connector>());
-                        S3Connector s3c = Mapper.Map<S3Connector>(cobj);
+                        //Mapper.(cfg => cfg.CreateMap<s3CommandObject, S3Connector>());
+                        S3Connector s3c = mapper.Map<S3Connector>(cobj);
                         
                         if (cobj.Action == S3Action.CREATEBUCKET)
                         {

@@ -11,7 +11,7 @@ as the files can automatically get the current date and time added onto the file
 
 (Windows installer is in /install subfolder - automatically adds s3cli.exe to windows path)
 
-* Requires .NET framework 4.5
+* Requires .NET framework 4.7.2
 * You may get a warning when downloading, this is because I have not signed the installer.
 
 ##Features

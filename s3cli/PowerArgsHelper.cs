@@ -16,14 +16,14 @@ using PowerArgs;
             catch (ArgException ex)
             {
                 Console.WriteLine(ex.Message);
-                Console.WriteLine(ArgUsage.GetStyledUsage<s3CommandObject>());
+                Console.WriteLine(ArgUsage.GenerateUsageFromTemplate<s3CommandObject>());
                 return new s3CommandObject();
             }
         }
 
         public static ConsoleString WriteArgs()
         {
-            return ArgUsage.GetStyledUsage<s3CommandObject>();
+            return ArgUsage.GenerateUsageFromTemplate<s3CommandObject>();
         }
     }
 
