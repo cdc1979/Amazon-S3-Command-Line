@@ -52,8 +52,7 @@ using PowerArgs;
         public string ProxyAddress { get; set; }
         [ArgDescription("Proxy server port e.g. 8080")]
         public string ProxyPort { get; set; }
-        [ArgDescription("AlertScale API Key (For success/fail notifications)")]
-        public string AlertScaleApiKey { get; set; }
+
         [ArgDescription("Zip files before uploading")]
         public bool ZipThis { get; set; } // does the file/folder get zipped before sending
         [ArgDescription("Zip compression level Best Compression/Normal/Least Compression")]

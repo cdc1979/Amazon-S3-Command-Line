@@ -57,7 +57,6 @@ Usage: s3cli options
    -DateStampFilename(-D)   switch            Automatically adjust filename to include current date and time
    -ProxyAddress(-P)        string            Proxy server address e.g. http://myproxy
    -ProxyPort(-Pr)          string            Proxy server port e.g. 8080
-   -AlertScaleApiKey(-Al)   string            AlertScale API Key (For success/fail notifications)
    -ZipThis(-Z)             switch            Zip files before uploading
    -ZipSpeed(-Zi)           zipspeedoptions   Zip compression level Best Compression/Normal/Least Compression
                                                 SLOW

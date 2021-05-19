@@ -16,7 +16,6 @@ using System.Threading.Tasks;
         public bool DateStampFilename { get; set; }
         public string ProxyAddress { get; set; }
         public string ProxyPort { get; set; }
-        public string AlertScaleApiKey { get; set; }
         // zip functions
         public bool ZipThis { get; set; } // does the file/folder get zipped before sending
         public ZipSpeedOptions ZipSpeed { get; set; } // which compression level to use
