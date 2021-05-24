@@ -206,7 +206,7 @@ public static class s3commands
                     dirrequest.StorageClass = S3StorageClass.ReducedRedundancy;
                     break;
                 case StorageOptions.STANDARDIA:
-                    dirrequest.StorageClass = S3StorageClass.ReducedRedundancy;
+                    dirrequest.StorageClass = S3StorageClass.StandardInfrequentAccess;
                     break;
                 case StorageOptions.STANDARD:
                     dirrequest.StorageClass = S3StorageClass.Standard;

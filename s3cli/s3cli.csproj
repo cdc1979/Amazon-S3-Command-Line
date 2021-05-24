@@ -53,10 +53,10 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>D7E0AFCC020B0A3CF45AD4E2C3AA05BCEAF95B1F</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>E0D6AC015C9D3CD2424FA9E47AC234ECE6C92CCE</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>s3cli_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>s3cli_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -120,6 +120,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
+    <None Include="s3cli_1_TemporaryKey.pfx" />
     <None Include="s3cli_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
