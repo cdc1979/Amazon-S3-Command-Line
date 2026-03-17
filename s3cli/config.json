@@ -1,0 +1,13 @@
+{
+  "Action": "PUTFILE",
+  "AccessKey": "YOUR_ACCESS_KEY",
+  "Secret": "YOUR_SECRET_KEY",
+  "Bucket": "your-bucket-name",
+  "FileLocal": "C:\\path\\to\\your\\file.txt",
+  "FileRemote": "",
+  "StorageOption": "STANDARD",
+  "DateStampFilename": false,
+  "ZipThis": false,
+  "ZipSpeed": "DEFAULT",
+  "PersistKeys": false
+}
